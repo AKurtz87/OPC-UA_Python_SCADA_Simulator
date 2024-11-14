@@ -1,3 +1,4 @@
 opcua
 flask
-cryptography
+logging
+threading
