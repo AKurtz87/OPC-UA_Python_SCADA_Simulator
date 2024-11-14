@@ -6,6 +6,11 @@ The proposed project aims to develop an advanced industrial simulator based on t
 
 ---
 
+<img width="1403" alt="Screenshot 2024-11-14 at 08 39 31" src="https://github.com/user-attachments/assets/dd380cce-aa17-4e80-aba7-fe69acebaf4e">
+
+
+---
+
 ### **Project Objectives**
 
 1. **Simulation of a Complete Industrial System**  
