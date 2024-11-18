@@ -57,7 +57,11 @@ def aggiungi_variabili_reattore(parent_name, reattore, temperatura, pressione, l
     agitatore_speed_var.set_writable()
     print(f"Creato nodo: {parent_name}_AgitatorSpeed -> {agitatore_speed_var.nodeid}")
 
-    return temperatura_var, pressione_var, livello_var, valvola_mandata_var, valvola_scarico_var, camicia_riscaldamento_var, agitatore_status_var, agitatore_speed_var
+    modalita_operativa_var = reattore.add_variable(idx, f"{parent_name}_ModalitaOperativa", True, datatype=ua.NodeId(ua.ObjectIds.Boolean))
+    modalita_operativa_var.set_writable()
+    print(f"Creato nodo: {parent_name}_ModalitaOperativa -> {modalita_operativa_var.nodeid}")
+
+    return temperatura_var, pressione_var, livello_var, valvola_mandata_var, valvola_scarico_var, camicia_riscaldamento_var, agitatore_status_var, agitatore_speed_var, modalita_operativa_var
 
 # Aggiungi variabili ai Reattori
 variabili_reattoreA = aggiungi_variabili_reattore("ReattoreA", reattoreA, 25.0, 2.0, 8.0)
@@ -72,7 +76,7 @@ LIVELLO_MIN, LIVELLO_MAX = 0.0, 100.0
 
 # Funzione per aggiornare le variabili del reattore
 def aggiorna_variabili(reattore_vars):
-    temperatura, pressione, livello, valvola_mandata, valvola_scarico, camicia_riscaldamento, agitatore_status, agitatore_speed = reattore_vars
+    temperatura, pressione, livello, valvola_mandata, valvola_scarico, camicia_riscaldamento, agitatore_status, agitatore_speed, modalita_operativa = reattore_vars
 
     # Aggiorna Temperatura
     camicia_on = camicia_riscaldamento.get_value() == 1
