@@ -74,7 +74,7 @@ This project presents an advanced industrial simulator built on the **OPC-UA** (
 
 ### **Screenshots**
 
-<img width="1403" alt="Screenshot 2024-11-14 at 08 39 31" src="https://github.com/user-attachments/assets/dd380cce-aa17-4e80-aba7-fe69acebaf4e">
+<img width="1438" alt="Screenshot 2024-11-18 at 16 11 57" src="https://github.com/user-attachments/assets/962c2876-9b6c-4468-8578-4d7dee598bb1">
 
 ---
 
